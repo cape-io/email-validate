@@ -5,7 +5,7 @@ import includes from 'lodash.includes';
 
 const emailIndex = {};
 
-export default function(apiKey, address, cb) {
+export default validateEmail(apiKey, address, cb) {
   // cache
   if (emailIndex[address]) {
     return {...emailIndex[address], breakPoint: 'cache'}
